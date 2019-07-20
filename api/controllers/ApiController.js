@@ -34,7 +34,7 @@ module.exports = {
         var timeDifferenceSeconds = finalSeconds - startSeconds; 
         var timeDifferenceMilliSeconds = (endMilliSeconds - startMilliSeconds);
         var totalTimeDiffernece = timeDifferenceHours+" H, "+timeDifferenceMinutes+" M, "+timeDifferenceSeconds+" S, "+timeDifferenceMilliSeconds+" MS";
-        return res.json({"startTime":startTime, "sum":sum, "endTime":endTime, "timeDifference:":totalTimeDiffernece});
+        return res.json({"startTime":startTime, "sum":sum, "endTime":endTime, "timeDifference":totalTimeDiffernece});
       },
 };
 
