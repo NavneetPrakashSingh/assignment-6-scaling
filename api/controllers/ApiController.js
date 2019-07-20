@@ -33,8 +33,10 @@ module.exports = {
         var timeDifferenceMinutes = finalMinutes - startMinutes;
         var timeDifferenceSeconds = finalSeconds - startSeconds; 
         var timeDifferenceMilliSeconds = (endMilliSeconds - startMilliSeconds);
+        var totalTimeDifferenceInSeconds = (timeDifferenceMilliSeconds/1000) + (timeDifferenceSeconds) + (timeDifferenceMinutes)*60 + (timeDifferenceHours)*60*60
         var totalTimeDiffernece = timeDifferenceHours+" H, "+timeDifferenceMinutes+" M, "+timeDifferenceSeconds+" S, "+timeDifferenceMilliSeconds+" MS";
-        return res.json({"startTime":startTime, "sum":sum, "endTime":endTime, "timeDifference":totalTimeDiffernece});
+        return res.json({"startTime":startTime, "sum":sum, "endTime":endTime, "timeDifference":totalTimeDiffernece,"timeDifferenceInSeconds":totalTimeDifferenceInSeconds});
+
       },
 };
 
